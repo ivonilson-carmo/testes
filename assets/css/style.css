@@ -55,6 +55,8 @@ h1{
     border-radius: .15rem;
     flex-grow: 1;
     border: 1px solid;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .search button{
@@ -133,6 +135,7 @@ header .filter {
     border-radius: 1rem;
     width: 30%;
     margin: 0 auto;
+    margin-top: 2rem;
 }
 
 .hide{
