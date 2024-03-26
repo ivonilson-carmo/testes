@@ -49,7 +49,7 @@ h1{
     margin-bottom: 1rem;
 }
 
-.search input{
+.search input[type='text']{
     margin-right: .625rem;
     padding-left: .625rem;
     border-radius: .15rem;
@@ -77,6 +77,10 @@ header .filter {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
+}
+
+.filter .item-check input{
+    margin-right: .3rem;
 }
 
 .data-career{
@@ -140,4 +144,50 @@ header .filter {
 
 .hide{
     display: none;
+}
+
+
+
+@media (max-width: 620px){
+    .data-career{
+        grid-template-columns: 1fr
+    }
+}
+
+@media (max-width: 460px){
+    h1{
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    main{
+        width: 95svw;
+        margin: 0 auto;
+    }
+
+    .item-career{
+        margin: 0.8rem 1.2rem;
+    }
+}
+
+@media (max-width: 280px){
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .item-career h2{
+        font-size: .85rem;
+    }
+
+    .item-career span{
+        font-size: .75rem;
+    }
+
+    .filter .item-check label{
+        font-weight: 400;
+        font-size: .85rem;
+    }
 }
