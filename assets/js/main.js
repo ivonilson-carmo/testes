@@ -13,8 +13,9 @@ class SearchAPI{
             : `https://portal.api.gupy.io/api/v1/jobs?jobName=${this.textSearch}&limit=${this.LIMIT}&offset=${this.OFFSET}&workplaceType=remote`
 
         
-        fetch(url)
-            .then( (response) => response.json() )
+        fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(url)}`)
+            .then( (response) => response.json())
+            .then( (response) => JSON.parse(response.contents))
             .then( (response) => response.data)
             .then( (response) => response.map( (item) => {
                 // Transforma data para o formato dd/mm/yyyy hh:mm
@@ -97,7 +98,7 @@ const search = new SearchAPI();
 document.querySelector('form').addEventListener('submit', (event) => {
     event.preventDefault();
     
-    const textCarrer = new URLSearchParams({params: search.getTextSearch()}).get('params');
+    const textCarrer = encodeURIComponent(search.getTextSearch())
 
     // caso tenha algum testo digitado na barra de busca
     if (textCarrer){
