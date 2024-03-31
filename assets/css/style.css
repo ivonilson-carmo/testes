@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: #F2F2F2;
-}
 
 main{
     margin: 0 auto;
@@ -96,11 +93,11 @@ header .filter {
     margin: .8rem 2rem;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #C2D7F2;
+    background-color: #1B72BF;
     cursor: pointer;
     box-shadow: 0px 1px 5px #000;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 
@@ -122,6 +119,7 @@ header .filter {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 12px;
+    color: #000;
 }
 
 .details{
